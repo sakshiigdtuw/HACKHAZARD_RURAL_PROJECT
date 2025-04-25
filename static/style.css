@@ -1,0 +1,63 @@
+/* Base styles */
+body {
+    background-image: url("/static/bg.jpg"); /* Set your image name here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px;
+    color: #2e7d32; /* dark green */
+}
+
+/* Overlay form background */
+form {
+    max-width: 500px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.92); /* white with slight transparency */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 128, 0, 0.3);
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    color: #1b5e20;
+}
+
+/* Inputs and selects */
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    border: 1px solid #a5d6a7;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Button */
+input[type="submit"] {
+    background-color: #43a047;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #2e7d32;
+}
+
+/* Prediction Text */
+h3 {
+    text-align: center;
+    margin-top: 20px;
+    color: #1b5e20;
+}

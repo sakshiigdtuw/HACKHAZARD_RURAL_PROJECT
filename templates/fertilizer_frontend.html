@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fertilizer Prediction</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h2>Fertilizer Recommendation System</h2>
+
+    <form action="/predict-fertilizer" method="post">
+      <label for="Temperature">Temperature:</label>
+      <input type="number" name="Temperature" id="Temperature" required />
+
+      <label for="Humidity">Humidity:</label>
+      <input type="number" name="Humidity" id="Humidity" required />
+
+      <label for="Moisture">Moisture:</label>
+      <input type="number" name="Moisture" id="Moisture" required />
+
+      <label for="Soil">Soil Type:</label>
+      <select name="Soil" id="Soil">
+        <option value="Sandy">Sandy</option>
+        <option value="Loamy">Loamy</option>
+        <option value="Black">Black</option>
+        <option value="Red">Red</option>
+        <option value="Clayey">Clayey</option>
+      </select>
+
+      <label for="Crop">Crop Type:</label>
+      <select name="Crop" id="Crop">
+        <option value="Maize">Maize</option>
+        <option value="Sugarcane">Sugarcane</option>
+        <option value="Cotton">Cotton</option>
+        <option value="Tobacco">Tobacco</option>
+        <option value="Paddy">Paddy</option>
+        <option value="Barley">Barley</option>
+      </select>
+
+      <label for="Nitrogen">Nitrogen:</label>
+      <input type="number" name="Nitrogen" id="Nitrogen" required />
+
+      <label for="Potassium">Potassium:</label>
+      <input type="number" name="Potassium" id="Potassium" required />
+
+      <label for="Phosphorous">Phosphorous:</label>
+      <input type="number" name="Phosphorous" id="Phosphorous" required />
+
+      <input type="submit" value="Predict Fertilizer" />
+    </form>
+
+    {% if prediction_text %}
+    <h3>{{ prediction_text }}</h3>
+    {% endif %}
+  </body>
+</html>
