@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation</title>
+    <!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+    
+</style>
+
+</head>
+<body>
+    <h1>🌾 Smart Crop Predictor</h1>
+
+    <form action="/predict-crop" method="post">
+        <label for="nitrogen">Nitrogen</label>
+        <input type="text" name="nitrogen" id="nitrogen" placeholder="Nitrogen"></input>
+
+        <label for="phosphorus">Phosphorus</label>
+        <input type="text" name="phosphorus" id="phosphorus" placeholder="Phosphorus"></input>
+
+        <label for="potassium">Potassium</label>
+        <input type="text" name="potassium" id="potassium" placeholder="Potassium"></input>
+
+        <label for="temperature">Temperature</label>
+        <input type="text" name="temperature" id="temperature" placeholder="Temperature"></input>
+
+        <label for="humidity">Humidity</label>
+        <input type="text" name="humidity" id="humidity" placeholder="Humidity"></input>
+
+        <label for="ph">PH</label>
+        <input type="text" name="ph" id="ph" placeholder="PH"></input>
+
+        <label for="rainfall">Rainfall</label>
+        <input type="text" name="rainfall" id="rainfall" placeholder="Rainfall"></input>
+
+        <button type="submit" name="submit" id="submit">Predict Your Crop</button>
+    </form>
+
+    {% if predictedCrop %}
+    <h2>Predicted Crop: {{ predictedCrop }}</h2>
+{% endif %}
+
+</body>
+</html>
