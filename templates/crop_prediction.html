@@ -5,44 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crop Recommendation</title>
     <!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-<style>
-    
-</style>
-
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='crop.css') }}">
 </head>
 <body>
-    <h1>🌾 Smart Crop Predictor</h1>
+    <div class="container">
+        <h1>🌾 Smart Crop Predictor</h1>
 
-    <form action="/predict-crop" method="post">
-        <label for="nitrogen">Nitrogen</label>
-        <input type="text" name="nitrogen" id="nitrogen" placeholder="Nitrogen"></input>
+        <form action="/predict-crop" method="post">
+            <div class="form-group">
+                <label for="nitrogen">Nitrogen</label>
+                <input type="text" name="nitrogen" id="nitrogen" placeholder="Nitrogen">
+            </div>
 
-        <label for="phosphorus">Phosphorus</label>
-        <input type="text" name="phosphorus" id="phosphorus" placeholder="Phosphorus"></input>
+            <div class="form-group">
+                <label for="phosphorus">Phosphorus</label>
+                <input type="text" name="phosphorus" id="phosphorus" placeholder="Phosphorus">
+            </div>
 
-        <label for="potassium">Potassium</label>
-        <input type="text" name="potassium" id="potassium" placeholder="Potassium"></input>
+            <div class="form-group">
+                <label for="potassium">Potassium</label>
+                <input type="text" name="potassium" id="potassium" placeholder="Potassium">
+            </div>
 
-        <label for="temperature">Temperature</label>
-        <input type="text" name="temperature" id="temperature" placeholder="Temperature"></input>
+            <div class="form-group">
+                <label for="temperature">Temperature</label>
+                <input type="text" name="temperature" id="temperature" placeholder="Temperature">
+            </div>
 
-        <label for="humidity">Humidity</label>
-        <input type="text" name="humidity" id="humidity" placeholder="Humidity"></input>
+            <div class="form-group">
+                <label for="humidity">Humidity</label>
+                <input type="text" name="humidity" id="humidity" placeholder="Humidity">
+            </div>
 
-        <label for="ph">PH</label>
-        <input type="text" name="ph" id="ph" placeholder="PH"></input>
+            <div class="form-group">
+                <label for="ph">pH</label>
+                <input type="text" name="ph" id="ph" placeholder="pH">
+            </div>
 
-        <label for="rainfall">Rainfall</label>
-        <input type="text" name="rainfall" id="rainfall" placeholder="Rainfall"></input>
+            <div class="form-group">
+                <label for="rainfall">Rainfall</label>
+                <input type="text" name="rainfall" id="rainfall" placeholder="Rainfall">
+            </div>
 
-        <button type="submit" name="submit" id="submit">Predict Your Crop</button>
-    </form>
+            <button type="submit" name="submit" id="submit">Predict Your Crop</button>
+        </form>
 
-    {% if predictedCrop %}
-    <h2>Predicted Crop: {{ predictedCrop }}</h2>
-{% endif %}
-
+        {% if predictedCrop %}
+        <div class="result">
+            <h2>Predicted Crop:</h2>
+            <span class="predicted-crop">{{ predictedCrop }}</span>
+        </div>
+        {% endif %}
+    </div>
+    
+    <div class="leaf-decoration leaf-top-right"></div>
+    <div class="leaf-decoration leaf-bottom-left"></div>
 </body>
 </html>
