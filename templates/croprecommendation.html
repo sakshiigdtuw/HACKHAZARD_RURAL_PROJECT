@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crop Recommendation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f9f8;
+      text-align: center;
+    }
+
+    .feature-page {
+      margin-top: 50px;
+    }
+
+    .feature-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .feature-icon {
+      font-size: 50px;
+      margin-bottom: 10px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translatey(0px);
+      }
+      50% {
+        transform: translatey(-10px);
+      }
+    }
+
+    h1 {
+      color: #2e8b57;
+      font-size: 2.5rem;
+    }
+
+    .feature-description {
+      font-size: 1.2rem;
+      max-width: 900px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .feature-images {
+      display: flex;
+      flex-direction: row; /* Images side by side */
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap; /* In case on small screen, they stack */
+    }
+
+    .feature-image {
+      width: 45%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      object-fit: cover;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #2e8b57;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #246b45;
+    }
+  </style>
+</head>
+<body>
+  <div class="feature-page">
+    <div class="feature-header">
+      <div class="feature-icon">🌾</div>
+      <h1>Crop Recommendation</h1>
+    </div>
+
+    <p class="feature-description">
+      Our AI-based Crop Recommendation System helps farmers by suggesting the best crops for their fields
+      based on scientific data like soil type, nutrient levels, weather conditions, and local environment.
+      <br><br>
+      🌱 It reduces the chances of crop failure and improves farm productivity.<br>
+      🌦️ Farmers can make smarter decisions according to real-time climate patterns.<br>
+      💧 It saves water, fertilizers, and farming costs by choosing the right crop for the right land.<br>
+      🚜 In the end, farmers earn better profits and contribute towards sustainable farming.
+    </p>
+
+    <div class="feature-images">
+      <img src="crop-recommendation1.jpg" alt="Crop Analysis" class="feature-image">
+      <img src="crop-recommendation2.jpeg" alt="Farmer Choosing Crops" class="feature-image">
+    </div>
+
+    <a href="index.html" class="back-button">← Back to Home</a>
+  </div>
+</body>
+</html>
