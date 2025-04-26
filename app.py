@@ -1,15 +1,15 @@
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, request, render_template, redirect
 import sklearn
 import pickle
 
 app = Flask(__name__)
 
 # Loading models
-model = pickle.load(open('fertilizer_model.pkl', 'rb'))
-crop_encoder = pickle.load(open('crop_encoder.pkl', 'rb'))
-fert_encoder = pickle.load(open('fert_encoder.pkl', 'rb'))
-soil_encoder = pickle.load(open('soil_encoder.pkl', 'rb'))
-crop_pred = pickle.load(open('crop_pred.pkl', 'rb'))
+model = pickle.load(open('pkl/fertilizer_model.pkl', 'rb'))
+crop_encoder = pickle.load(open('pkl/crop_encoder.pkl', 'rb'))
+fert_encoder = pickle.load(open('pkl/fert_encoder.pkl', 'rb'))
+soil_encoder = pickle.load(open('pkl/soil_encoder.pkl', 'rb'))
+crop_pred = pickle.load(open('pkl/crop_pred.pkl', 'rb'))
 
 # Home route
 @app.route('/')
@@ -45,6 +45,7 @@ def predict_fertilizer():
 def crop():
     return render_template('crop_prediction.html')
 
+# Crop Prediction route
 @app.route('/predict-crop', methods=['POST'])
 def predict_crop():
     Nitrogen = float(request.form['nitrogen'])
@@ -64,6 +65,26 @@ def predict_crop():
     else:
         return "Sorry, please check the values and try again."
 
+@app.route('/crop-disease-prediction')
+def predict_disease():
+    return redirect("https://appapppy-qozfumcmiwrph76libcuqw.streamlit.app/")
+
+
+@app.route('/fertilizer_feature')
+def fert_feature():
+    return render_template("fertilizer.html")
+
+@app.route('/crop_recommend_feature')
+def crop_feature():
+    return render_template('croprecommendation.html')
+
+@app.route('/govt_schemes_feature')
+def govt():
+    return render_template("govtschemes.html")
+
+@app.route('/disease_pred_feature')
+def disease():
+    return render_template("diseaseprediction.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
