@@ -35,7 +35,7 @@ Developed during **Hackhazards'25**, it aims to bridge the gap between farming n
 ### Installation
 1. **Clone the repository**
    ```bash
-   git clone <repository-link>
+   git clone <https://github.com/sakshiigdtuw/KrishiMitra.git>
 2. **Navigate to the project directory**
    ```bash
    cd Krishiमित्र
