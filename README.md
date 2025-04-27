@@ -58,11 +58,18 @@ Developed during **Hackhazards'25**, it aims to bridge the gap between farming n
 5. Contact Us Page
    ![image](https://github.com/user-attachments/assets/d391cb8a-8571-45f2-9f52-4c63618e9fd3)
 
+
 ### 👨‍💻 Team Members
 1. Kanishka Tyagi
 2. Sakshi Chaudhary
 3. Sukanya
 4. Sukriti Kumari
+
+---
+### 🌟 Thank you for visiting Krishiमित्र!  
+Built with love, passion, and lots of late-night debugging ☕🌾  
+- Team Krishiमित्र 💚
+
 
 
 
